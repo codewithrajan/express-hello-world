@@ -1,0 +1,65 @@
+<!--HTML FILES-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+   
+</head>
+
+<body>
+    {{>nav}}
+    <!-------------------------ACCOUNT PAGE------------------------------------>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./images\Login.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="message" style="padding-bottom: 20px; text-align: center;">
+                        <h2 style="color: #ff523b;">Say Hello,👋</h2>
+                        <h4 style="color: darkblue;">We are always here to serve you!</h4>
+                    </div>
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <h3 style="color:green; font-size:25px"><u>Contact Us Form</u></h3>
+                        </div>
+                        <form id="" action="/contact" method="post">
+
+                            <input type="text" name="fullName" id="inputEmail4" placeholder="Enter your Full Name"
+                                required>
+
+                            <input type="tel" id="inputPhone4" name="mobileNumber" placeholder="Enter Mobile Number"
+                                required>
+
+                            <input type="email" id="inputEmail4" name="email" placeholder="name@gmail.com" required>
+
+                            <textarea name="description" placeholder="Text a Message to Us" row="8" required
+                                style="width:260px; ;"></textarea>
+
+                            <input type="submit" class="btn" value="SEND MESSAGE">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-------------------------------------------------FOOTER------------------------------------------------------------------->
+
+   
+{{>footer}}
+    <!---Script for Preloader--->
+    {{!-- <script src="js\script.js"></script> --}}
+
+</body>
+
+</html>

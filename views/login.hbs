@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+
+</head>
+
+<body>
+    {{!-- <div id="preloader"></div>       --}}
+    <!---------------------------------CONTAINER CLASS-------------------------------------->
+    {{>nav}}
+    <!-------------------------ACCOUNT PAGE------------------------------------>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./images\register (2).png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <h3 style="color: green; font-size:35px;"><u>Login</u></h3>
+                        </div>             
+                        {{#if messages.error}}
+                        <p style="color: red;" id="errormsg">{{messages.error}}</p>
+                        {{/if}}
+                        <form id="" action="login" method="post">
+                            <input type="text" name="username" id="exampleInputEmail1" placeholder="Enter Username"
+                                required>
+                            <input type="password" name="password" id="exampleInputPassword1" placeholder="Password">
+                            <button type="submit" class="btn">Login Now</button>
+                            <a href="/forgot">Forgot Password</a> | <a href="/register">New User? <b>Register</b></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- <script src="js\script.js"></script> --}}
+    {{>footer}}
+    <script>
+
+         const errormsg = document.getElementById("errormsg").textContent;
+         if(errormsg)
+           alert(errormsg);
+
+    </script>
+
+</body>
+
+</html>

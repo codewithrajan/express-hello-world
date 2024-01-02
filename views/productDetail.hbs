@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} Details</title>
+</head>
+<body>
+    <h1>{{ product.name }} Details</h1>
+    <p>Product ID: {{ product.productId }}</p>
+    <p>Type: {{ product.type }}</p>
+    <p>Price: {{ product.price }}</p>
+    <p>Total Quantity: {{ product.totalQuantity }}</p>
+    <p>Left Quantity: {{ product.leftQuantity }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Images: {{#each product.images}}<img src="{{ this }}" alt="Product Image">{{/each}}</p>
+
+    <!-- Add update and delete buttons with appropriate routes -->
+    <a href="/products/update/{{ product.productId }}">Update</a>
+    <form action="/products/delete/{{ product.productId }}" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

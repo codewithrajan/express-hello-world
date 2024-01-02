@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+</head>
+
+<body>
+    <h1>Update Product</h1>
+    <form action="/products/update/{{ product.productId }}" method="post">
+        <!-- Populate input fields with existing product details -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ product.name }}" required>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" value="{{ product.type }}" required>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" value="{{ product.price }}" required>
+        <label for="totalQuantity">Total Quantity:</label>
+        <input type="number" id="totalQuantity" name="totalQuantity" value="{{ product.totalQuantity }}" required>
+        <label for="leftQuantity">Left Quantity:</label>
+        <input type="number" id="leftQuantity" name="leftQuantity" value="{{ product.leftQuantity }}" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">{{ product.description }}</textarea>
+        <label for="images">Images (upload):</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple>
+        <button type="submit">Update Product</button>
+    </form>
+    <a href="/products/{{ product.productId }}">Cancel</a>
+</body>
+
+</html>

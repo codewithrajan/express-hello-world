@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+</head>
+<body>
+    <h1>All Products</h1>
+    {{#each products}}
+        <div>
+            <h2>{{ name }}</h2>
+            <p>Product ID: {{ productId }}</p>
+            <p>Type: {{ type }}</p>
+            <p>Price: {{ price }}</p>
+            <p>Total Quantity: {{ totalQuantity }}</p>
+            <p>Left Quantity: {{ leftQuantity }}</p>
+            <p>Description: {{ description }}</p>
+            <p>Images: {{#each images}}<img src="{{ this }}" alt="Product Image">{{/each}}</p>
+            <a href="/products/{{ productId }}">Details</a>
+            <a href="/products/update/{{ productId }}">Update</a>
+            <form action="/products/delete/{{ productId }}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    {{/each}}
+    <a href="/products/add">Add New Product</a>
+</body>
+</html>

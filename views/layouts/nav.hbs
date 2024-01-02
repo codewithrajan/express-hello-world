@@ -1,0 +1,25 @@
+{{!-- <div id="preloader"></div>     --}}
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="/index"> <img src="./images/logo.png" width="125px"></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                {{#if user}}
+
+                <li><a href="/index">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                 <li><a href="/secret">Secret</a></li>
+                <li><a href="/register">SignUp</a></li>
+                <li><a href="/contact">Contact</a></li>
+
+                {{/if}}
+
+            </ul>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
